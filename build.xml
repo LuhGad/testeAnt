@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="executar" name="teste" basedir=".">
+<property name="classes" location="classes" />
+<property name="arquivo" value="TesteAnt" />
+	
+<target name="dir">
+	<mkdir dir="classes" />
+
+	</target>
+
+<target name="compilar" depends="dir">
+	<javac includeantruntime="false" srcdir="${basedir}"
+	destdir="${classes}" />
+		
+	</target>
+
+<target name="executar" depends="dir, compilar">
+<java classname="${arquivo}" >
+<classpath path="${classes}" />
+</java>
+</target>
+
+<target name="deletar" depends="dir,compilar,executar">
+<delete>
+<fileset dir="C:\Users\lucia\Desktop\Teste\classes" includes="**/*.class"/>
+</delete>
+</target>
+
+
+
+</project>

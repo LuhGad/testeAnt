@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="alvoC" name="Praticas">
+<property name="nomeDoProjeto" value="PrimeiroExemplo"/>
+
+<target name="alvoA" description="Realizar passo a">
+<echo> Realizando passo A </echo>
+</target>
+
+<target name="alvoB" description="Realizar passo b" depends="alvoA">
+<echo> Realizando passo B</echo>
+</target>
+
+<target name="alvoC" description="Realizar passo b" depends="alvoB">
+<echo> Realizando passo C</echo>
+</target>
+
+
+
+</project>
